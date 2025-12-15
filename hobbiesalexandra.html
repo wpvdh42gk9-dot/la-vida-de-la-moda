@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>Página con tres columnas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* --- MENÚ SUPERIOR --- */
+    nav {
+      background-color: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav li a:hover {
+      background-color: #555;
+    }
+
+    /* --- TRES COLUMNAS (CORREGIDO) --- */
+    .contenedor {
+      display: flex;               /* Asegura columnas lado a lado */
+      flex-direction: row;         /* Fuerza fila horizontal */
+      padding: 20px;
+      gap: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .columna {
+      flex: 1;
+      background: #f2f2f2;
+      border: 1px solid #ddd;
+      padding: 20px;
+      box-sizing: border-box;
+      min-width: 0;               /* Evita que las columnas salten de línea */
+    }
+
+    /* --- PIE DE PÁGINA --- */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+
+    /* --- RESPONSIVE: SOLO en pantallas pequeñas --- */
+    @media (max-width: 700px) {
+      .contenedor {
+        flex-direction: column;    /* SOLO en móvil se apilan */
+      }
+    }
+  </style>
+</head>
+<body>
+	<h1> MODA </h1>
+	<p> Alexandra De La Torre Rodriguez , I.E.S Miguel de Cervantes  . Incluye debajo un banner o imagen apaisada </p>
+<!-- MENÚ SUPERIOR -->
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- TRES COLUMNAS -->
+  <div class="contenedor">
+    <div class="columna">
+      <h2>  ROPA  1</h2>
+      <p> Para mi una de las mejores marcas para ropa de diario es Nike y New Balance.</p>
+      <a href="https://www.newbalance.es/es/mujer/ropa/">
+  <img src="data:image/png;base64,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" alt="Descripción de la imagen">
+  <a href="https://www.google.com/aclk?sa=L&ai=DChsSEwjfkNWkhaaRAxXOqf0FHYNiD_EYACICCAEQBBoCd2Y&co=1&gclid=EAIaIQobChMI35DVpIWmkQMVzqn9BR2DYg_xEAAYASAAEgLFXfD_BwE&cce=2&sig=AOD64_2A1FHgTptHH2BxYwLXrH1ZdaRs3w&q&adurl&ved=2ahUKEwjh9M6khaaRAxX7Q6QEHTnsEZAQ0Qx6BAgMEAE">
+    <img src="https://www.vhv.rs/dpng/d/6-66368_orange-nike-logo-png-transparent-png.png" alt="Logo de ejemplo" width="350">
+</a>
+
+
+  
+</a>
+
+    </div>
+
+    <div class="columna">
+      <h2>Zapatos 2</h2>
+      <p>Sin duda mi ropero esta lleno de zapatos Karl Langerfeld , Versace y sobre todo un solo tipo de zapatillas de Nike , las Dance.</p>
+  <table border="0" cellpadding="10">
+    <tr>
+        <td>
+            <a href="https://www.google.com/aclk?sa=L&ai=DChsSEwjQ0d2siqaRAxULl4MHHVgJHGEYACICCAEQERoCZWY&co=1&gclid=EAIaIQobChMI0NHdrIqmkQMVC5eDBx1YCRxhEAAYASAAEgIFkPD_BwE&cce=2&sig=AOD64_1pltgPBzOkIa7ubolaiHtDW4OSxA&q&adurl&ved=2ahUKEwjk8NWsiqaRAxV-gv0HHYTjHD4Q0Qx6BAg5EAE" target="_blank">
+                <img src="https://l10brand.com/wp-content/uploads/2022/09/Sfondo-1.jpg" width="200" alt="Imagen 1">
+            </a>
+        </td>
+        <td>
+            <a href="https://www.google.com/aclk?sa=L&ai=DChsSEwiggtSJjKaRAxX1p4MHHVGDMEoYACICCAEQNhoCZWY&co=1&gclid=EAIaIQobChMIoILUiYymkQMV9aeDBx1RgzBKEAAYAiAAEgJq1fD_BwE&cce=2&sig=AOD64_34Eeg9J-XT-HjkSEbVT9kt-lfTqw&q&adurl&ved=2ahUKEwiL-c6JjKaRAxWrgf0HHSSqJBkQ0Qx6BAgMEAE" target="_blank">
+                <img src="https://www.keslem.es/75028-superlarge_default/anakapri-florastone-karl-patch-35789.jpg" width="200" alt="Imagen 2">
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.nike.com/es/w/dunk-zapatillas-90aohzy7ok&ved=2ahUKEwiAxL3Li6aRAxWPh_0HHRjWFk4QFnoECCAQAQ&usg=AOvVaw2cS8g6oa_gQkDv3muGD3h4" target="_blank">
+                <img src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fnapolestore.com.py%2Fnike-air-force-1-low-dance-wm%2F%3Fsrsltid%3DAfmBOoo9g4UXvvh_lFxtyipJIsu4EkwN6sEtBuwVlC4x9oo7OI_EEh9P&ved=0CBUQjRxqFwoTCOiRj5yLppEDFQAAAAAdAAAAABA9&opi=89978449" width="200" alt="Imagen 3">
+            </a>
+        </td>
+        <td>
+            <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.zalando.es/calzado-de-mujer/versace-online-shop/&ved=2ahUKEwj5xqDpjKaRAxVInP0HHYJnFUYQFnoECCMQAQ&usg=AOvVaw2_XZUHtuPDLOcczZFTPBit" target="_blank">
+                <img src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.versace.com%2Fes%2Fes%2Fmujer%2Fzapatos%2Fzapatillas%2Fzapatillas-versace-mercury-m_vs_01%2F1016874-1A15340_DSN_355_1PV80__.html&ved=0CBUQjRxqFwoTCKihwqmMppEDFQAAAAAdAAAAABAH&opi=89978449" width="200" alt="Imagen 4">
+            </a>
+        </td>
+    </tr>
+</table>
+
+  
+  
+  
+  
+    </div>
+
+    <div class="columna">
+      <h2>Bolsos 3</h2>
+      <p>Los bolsos son uno de los objetos mas preciado , mis bolsos favoritos son Michael Kors , Love Moschino y los mas basicos como Guess.</p>
+    </div>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>© 2025 Mi sitio web | Todos los derechos reservados</p>
+  </footer>
+
+
+
+
+
+</body></html>
